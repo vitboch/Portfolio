@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*home*/
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+
+/*hamburger*/
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (min-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/*header*/
+header {
+    height: 10rem;
+    background-color: #c06c65;
+}
+
+h1 {
+    position: absolute;
+    left: 5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    /*align-content: center;*/
+}
+
+h2 {
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/*about*/
+#about img {
+    margin: 1rem 4rem;
+    float: right;
+    width: 10vh;
+    border-radius: 50%;
+}
+
+#about p {
+    color: #333;
+    margin: 1rem 3rem;
+    font-size: 1.2em;
+}
+
+/*portfolio*/
+#portfolio {
+    margin: 1rem 10rem;
+}
+
+#portfolio p {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 10rem;
+}
+
+/*contacts*/
+.side-links {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.side-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: white;
+    width: 180px;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+.side-link-youtube {
+    background-color: red;
+}
+
+.side-link-twitter {
+    background-color: #1DA1F2;
+}
+
+.side-link-github {
+    background-color: #6e5494;
+}
+
+.side-link-text {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.side-link-icon {
+    color: white;
+    font-size: 30px;
+}
+
+/*footer*/
+footer {
+    height: 1.5rem;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 1.2em;
+    margin: 3em auto;
+}
+
+
+.btn {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #c06c65;
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+/* The Modal (background) */
+.open-window {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.window {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
